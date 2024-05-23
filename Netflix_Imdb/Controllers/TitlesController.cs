@@ -1,11 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Netflix_Imdb.Application.Entity;
 using Netflix_Imdb.Application.Services.Interfaces;
 
 namespace Netflix_Imdb.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class TitlesController : ControllerBase
     {
         private readonly ITitleService _titleService;
